@@ -3,40 +3,197 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nova Digitals</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Services - Nova Digital</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
-    <link href="https://googleapis.com" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       href="assets/Screenshot 2026-10-13 025102.png"
     />
+
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav class="nav-bar">
-      <div class="nav-left">
-        <div class="nav-logo">
-          <img src="assets/Screenshot 2026-10-13 025102.png" />
-          <span>Nova Digital</span>
+    <!-- Header & Hero Section -->
+    <header class="hero-services-section">
+      <nav class="nav-bar">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="assets/Screenshot 2026-10-13 025102.png"
+              alt="Nova Digital Logo"
+              onerror="
+                this.onerror = null;
+                this.src = 'https://placehold.co/40x40/2dd4bf/0d2240?text=ND';
+              "
+            />
+            <span>Nova Digital</span>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="services-hero-content">
+        <span class="badge">Our Expertise</span>
+        <h1 class="page-title">Services We Provide</h1>
+        <p class="page-subtitle">
+          Tailored digital marketing, branding, and web development solutions
+          designed to convert ideas into measurable business impact.
+        </p>
+      </div>
+    </header>
+
+    <!-- Core Services Grid -->
+    <section class="services-main-section">
+      <div class="section-header">
+        <h2>What We Do Best</h2>
+        <p>
+          Comprehensive digital growth strategies built for small businesses
+        </p>
+      </div>
+
+      <div class="service-card-container">
+        <!-- Service 1 -->
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3>Social Media Marketing</h3>
+          <p>
+            We help businesses build active online communities through strategic
+            content planning, engaging audience posts, and consistent brand
+            communication across social media platforms.
+          </p>
+          <ul class="service-features">
+            <li>
+              <i class="fa-solid fa-check"></i> Strategic Content Planning
+            </li>
+            <li><i class="fa-solid fa-check"></i> Audience Engagement</li>
+            <li><i class="fa-solid fa-check"></i> Cross-Platform Management</li>
+          </ul>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3>Branding & Graphic Design</h3>
+          <p>
+            We create cohesive visual identities that help businesses
+            communicate their personality, stand out from competitors, and build
+            instant recognition with target audiences.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Logo & Visual Identity</li>
+            <li><i class="fa-solid fa-check"></i> Brand Guidelines</li>
+            <li><i class="fa-solid fa-check"></i> Marketing Materials</li>
+          </ul>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Website Development</h3>
+          <p>
+            We build responsive, user-friendly websites that present businesses
+            professionally, communicate their services clearly, and make it
+            effortless for customers to get in touch.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Responsive Mobile Design</li>
+            <li><i class="fa-solid fa-check"></i> User-Friendly Navigation</li>
+            <li><i class="fa-solid fa-check"></i> SEO & Speed Optimized</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Choose Us / Benefits Section -->
+    <section class="benefits-section">
+      <div class="section-header">
+        <h2>Why Work With Us</h2>
+        <p>How our digital solutions deliver value to your business</p>
+      </div>
+
+      <div class="benefits-container">
+        <div class="benefits-card">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3>Mobile-Friendly Experiences</h3>
+          <p>
+            Our websites adapt seamlessly to phones, tablets, and desktops,
+            helping customers browse your business wherever they are.
+          </p>
+        </div>
+
+        <div class="benefits-card">
+          <div class="benefit-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Consistent Brand Identity</h3>
+          <p>
+            We help your business maintain a recognizable, professional
+            appearance across your website and all digital platforms.
+          </p>
+        </div>
+
+        <div class="benefits-card">
+          <div class="benefit-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Better Customer Engagement</h3>
+          <p>
+            Clear messaging and well-organized content make it easier for
+            visitors to understand your services and contact your business.
+          </p>
+        </div>
+
+        <div class="benefits-card">
+          <div class="benefit-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Solutions Built Around Your Goals</h3>
+          <p>
+            We work closely with you to understand your business needs and
+            tailor our digital solutions directly to your objectives.
+          </p>
         </div>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    Services
+      <!-- CTA Banner -->
+      <div class="service-cta">
+        <div class="cta-content">
+          <h3>Ready to Elevate Your Digital Presence?</h3>
+          <p>
+            Let's collaborate to build something remarkable for your business.
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column" id="brand-name">

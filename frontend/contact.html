@@ -3,46 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nova Digitals</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Contact Us - Nova Digital</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
-    <link href="https://googleapis.com" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       href="assets/Screenshot 2026-10-13 025102.png"
     />
+
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Shared Stylesheet Link -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Contact Page Embedded Styles (Self-Contained & Responsive) -->
   </head>
   <body>
-    <nav class="nav-bar">
-      <div class="nav-left">
-        <div class="nav-logo">
-          <img src="assets/Screenshot 2026-10-13 025102.png" />
-          <span>Nova Digital</span>
+    <!-- Header Section -->
+    <header class="contact-header">
+      <nav class="nav-bar">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img
+              src="assets/Screenshot 2026-10-13 025102.png"
+              alt="Nova Digital Logo"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+            <div class="logo-fallback" style="display: none">ND</div>
+            <span>Nova Digital</span>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-title-wrapper">
+        <span class="badge">Get In Touch</span>
+        <h1>We'd Love to Hear From You</h1>
+      </div>
+    </header>
+
+    <!-- Main Contacts Container (Grid Layout) -->
+    <main class="contacts-container">
+      <!-- Left Column: Company Contact Info -->
+      <div class="contact-left">
+        <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-intro-p">
+          Whether you have a question about our services, need a project quote,
+          or simply want to explore possibilities for your business, our team is
+          ready to assist.
+        </p>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-details">
+              <label>Email Us</label>
+              <a href="mailto:hello@novadigital.example"
+                >hello@novadigital.example</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info-details">
+              <label>Call Us</label>
+              <a href="tel:+12025550147">+1 (202) 555-0147</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-details">
+              <label>Visit Our Office</label>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                120 Market Street, Suite 200, San Francisco, CA
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="info-details">
+              <label>Business Hours</label>
+              <span>Monday–Friday, 9:00 AM–5:00 PM</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    contact
+      <!-- Right Column: Interactive Form Card -->
+      <div class="contacts-right">
+        <h3 class="form-header-title">Send Us a Message</h3>
+
+        <!-- Form Submission Feedback Banner -->
+        <div id="success-message" class="success-message">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>Message Sent Successfully!</h4>
+          <p>
+            Thank you for reaching out. A representative from Nova Digital will
+            respond shortly.
+          </p>
+        </div>
+
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://formspree.io/f/xyeepkzj"
+          method="POST"
+          onsubmit="handleFormSubmit(event)"
+        >
+          <!-- First & Last Name Sub-Grid -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input
+                type="text"
+                id="first-name"
+                required
+                placeholder="Jane"
+                name="first-name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name *</label>
+              <input
+                type="text"
+                id="last-name"
+                required
+                placeholder="Doe"
+                name="last-name"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              required
+              name="email"
+              placeholder="jane.doe@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+1 (555) 000-0000"
+              name="phone"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Tell us about your project or inquiry..."
+            ></textarea>
+          </div>
+
+          <!-- Added id="submit-btn" here -->
+          <button type="submit" id="submit-btn" class="btn-submit">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <!-- Added form status message feedback box -->
+        <div
+          id="form-status"
+          style="
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+          "
+        ></div>
+        >
+      </div>
+    </main>
+
+    <!-- Complete 4-Column Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column" id="brand-name">
           <h3>Nova Digital</h3>
           <p>Ideas Into Impact</p>
         </div>
+
         <div class="footer-column" id="working-hours">
           <h3>Business Hours</h3>
           <p>Monday–Friday, 9:00 AM–5:00 PM</p>
@@ -56,64 +248,133 @@
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <i class="fa-brands fa-linkedin icon-cilp"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </li>
-
             <li>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
-                <i class="fa-brands fa-instagram icon-clip"></i>
+                <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
-
             <li>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
-                <i class="fa-brands fa-facebook icon-clip"></i>
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
             </li>
           </ul>
         </div>
+
         <div class="footer-column" id="contacts">
           <h3>Contact Us</h3>
-          <ul>
+          <ul class="footer-contact-list">
             <li>
-              <a href="mailto:hello@novadigital.com">
-                <i class="fa-solid fa-envelope icon-clip"></i>
+              <a href="mailto:hello@novadigital.example">
+                <i class="fa-solid fa-envelope"></i>
                 <span>hello@novadigital.example</span>
               </a>
             </li>
             <li>
-              <a href="tel:+1 (202) 555-0147"
-                ><i class="fa-solid fa-phone icon-clip"></i>
+              <a href="tel:+12025550147">
+                <i class="fa-solid fa-phone"></i>
                 <span>+1 (202) 555-0147</span>
               </a>
             </li>
-
             <li>
               <a
-                href="https://google.com"
+                href="https://maps.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fa-solid fa-location-dot icon-clip"></i>
+                <i class="fa-solid fa-location-dot"></i>
                 <span>120 Market Street, Suite 200, San Francisco, CA</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
+
       <div class="footer-copyright">
-        <p>&copy; 2026 Nova Digital. All rights reserved</p>
+        <p>&copy; 2026 Nova Digital. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Form Handler Script -->
+    <script>
+      async function handleFormSubmit(event) {
+        event.preventDefault(); // Prevents page reload / redirect
+
+        const form = event.target;
+        const submitBtn =
+          document.getElementById("submit-btn") ||
+          form.querySelector(".btn-submit");
+        const statusDiv = document.getElementById("form-status");
+        const formData = new FormData(form);
+
+        // Update button state
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          const btnText = submitBtn.querySelector("span");
+          if (btnText) btnText.textContent = "Sending...";
+        }
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json", // Forces Formspree to return JSON instead of redirecting
+            },
+          });
+
+          if (response.ok) {
+            // Show success message
+            if (statusDiv) {
+              statusDiv.style.display = "block";
+              statusDiv.style.backgroundColor = "#d1fae5";
+              statusDiv.style.color = "#065f46";
+              statusDiv.textContent =
+                "Thank you! Your message has been sent successfully.";
+            } else {
+              alert("Thank you! Your message has been sent successfully.");
+            }
+
+            // Clear all input fields
+            form.reset();
+          } else {
+            throw new Error("Server returned an error response.");
+          }
+        } catch (error) {
+          // Show error message
+          if (statusDiv) {
+            statusDiv.style.display = "block";
+            statusDiv.style.backgroundColor = "#fee2e2";
+            statusDiv.style.color = "#991b1b";
+            statusDiv.textContent =
+              "Oops! There was a problem sending your message. Please try again.";
+          } else {
+            alert("Oops! There was a problem sending your message.");
+          }
+        } finally {
+          // Restore button state
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            const btnText = submitBtn.querySelector("span");
+            if (btnText) btnText.textContent = "Send Message";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
