@@ -915,7 +915,7 @@ a {
 
 .hero-services-section {
   background-image: url(assets/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
-  /* height: 70vh; */
+  height: 70vh;
   background-size: contain;
   background-repeat: no-repeat;
   /* background-position: center; */
@@ -1920,4 +1920,90 @@ ul {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+/* ==========================================================================
+   Services Preview (Homepage)
+   ========================================================================== */
+
+.services-preview-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0 35px;
+}
+
+.service-preview-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-preview-card:hover {
+  transform: translateY(-5px);
+  border-color: #2dd4bf;
+  box-shadow: 0 12px 24px -5px rgba(13, 34, 64, 0.08);
+}
+
+.service-preview-card .service-icon {
+  width: 50px;
+  height: 50px;
+  background: #f0fdf4;
+  color: #2dd4bf;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.service-preview-card h3 {
+  font-size: 1.25rem;
+  color: #0d2240;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.service-preview-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-link {
+  color: #0d2240;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.service-link:hover {
+  color: #2dd4bf;
+  gap: 12px;
+}
+
+.services-preview-cta {
+  text-align: center;
 }

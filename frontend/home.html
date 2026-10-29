@@ -39,17 +39,16 @@
               src="assets/Screenshot 2026-10-13 025102.png"
               alt="Nova Digital Logo"
               onerror="
-                this.style.display = 'none';
-                this.nextElementSibling.style.display = 'flex';
+                this.onerror = null;
+                this.src = 'https://placehold.co/40x40/2dd4bf/0d2240?text=ND';
               "
             />
-            <div class="logo-fallback" style="display: none">ND</div>
             <span>Nova Digital</span>
           </div>
         </div>
 
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="home.html" class="active">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -66,7 +65,7 @@
                 class="btn btn-primary"
                 onclick="
                   document
-                    .getElementById('services')
+                    .getElementById('services-preview-section')
                     .scrollIntoView({ behavior: 'smooth' })
                 "
               >
@@ -87,6 +86,72 @@
         small businesses improve their online presence through social media
         marketing, branding, and website development.
       </p>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview-section" id="services-preview-section">
+      <div class="section-header">
+        <span class="badge">What We Do</span>
+        <h2>Our Core Services</h2>
+        <p>
+          We help small businesses build strong digital foundations through
+          tailored design and marketing.
+        </p>
+      </div>
+
+      <div class="services-preview-grid">
+        <!-- Service 1 -->
+        <div class="service-preview-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3>Social Media Marketing</h3>
+          <p>
+            Build active online communities through strategic content planning
+            and engaging brand communication.
+          </p>
+          <a href="services.html" class="service-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-preview-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3>Branding & Design</h3>
+          <p>
+            Create cohesive visual identities that help your business stand out
+            and build instant customer trust.
+          </p>
+          <a href="services.html" class="service-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-preview-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Website Development</h3>
+          <p>
+            Build fast, mobile-friendly websites that present your services
+            clearly and drive real customer inquiry.
+          </p>
+          <a href="services.html" class="service-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="services-preview-cta">
+        <a href="services.html" class="btn btn-primary">View All Services</a>
+      </div>
     </section>
 
     <!-- CLIENT TESTIMONIALS SECTION (Text cards without avatars) -->
